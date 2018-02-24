@@ -2,12 +2,6 @@ from setuptools import setup, find_packages
 
 install_requires = ['tornado']
 
-# if python < 3, we need futures backport
-try:
-    import concurrent.futures  # noqa
-except ImportError:
-    install_requires.append('futures')
-
 setup(
     name='threadloop',
     version='1.0.2',
